@@ -5,13 +5,11 @@ import {
   FlatList,
   ScrollView,
   StyleSheet,
-  TouchableOpacity,
-//   alert
+  TouchableOpacity
 } from "react-native";
-import { SimpleText } from "./StyledText";
 
 
-export const NavTabs = () => {
+export default NavTabs = () => {
 
   const [activeTabId, setActiveTabId] = useState(1);
 
@@ -33,7 +31,7 @@ export const NavTabs = () => {
         renderItem={({ item }) => (
           <View>
             <TouchableOpacity onPress={() => activeTab(item.id)}>
-              <SimpleText style={(item.id === activeTabId ? styles.activeTab : styles.tab)}>{item.name}</SimpleText>
+              <Text style={(item.id === activeTabId ? styles.activeTab : styles.tab)}>{item.name}</Text>
             </TouchableOpacity>
           </View>
         )}
@@ -51,21 +49,23 @@ const styles = StyleSheet.create({
     backgroundColor: "#B5B5B5",
     color: "#ffffff",
     paddingHorizontal: 20,
-    paddingVertical: 5,
+    paddingVertical: 10,
     minWidth: 50,
     textAlign: "center",
     textTransform: 'uppercase',
     fontWeight: 'bold',
     letterSpacing: 0.3,
+    overflow: 'hidden',
   },
   activeTab: {
+    overflow: 'hidden',
     backgroundColor: "#515C6F",
     marginBottom: 15,
     marginRight: 10,
     borderRadius: 20,
     color: "#ffffff",
     paddingHorizontal: 20,
-    paddingVertical: 5,
+    paddingVertical: 10,
     minWidth: 50,
     textAlign: "center",
     textTransform: 'uppercase',

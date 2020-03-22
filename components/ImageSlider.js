@@ -11,13 +11,13 @@ import {
   Button
 } from "react-native";
 
-import { SimpleText } from "./StyledText";
-import { BUTTON } from "./Button";
+// import { SimpleText } from "./StyledText";
+
 
 const Width = Dimensions.get("window").width;
 const Height = Dimensions.get("window").height;
 
-export const ImageSlider = () => {
+export default ImageSlider = () => {
   return (
     <View>
       <FlatList
@@ -28,35 +28,35 @@ export const ImageSlider = () => {
             id: 1,
             text:
               "lorem ipsume text with and without, lorem ipsume text. avialable 24/7",
-            image: require("../assets/images/Base.jpg")
+            image: "https://image.shutterstock.com/image-photo/happy-beautiful-asian-shopaholic-woman-260nw-1278669220.jpg"
           },
           {
             id: 2,
             text: "Grocery is cheap",
-            image: require("../assets/images/Base.jpg")
+            image: "https://image.shutterstock.com/image-photo/happy-beautiful-asian-shopaholic-woman-260nw-1278669220.jpg"
           },
           {
             id: 3,
             text: "Fruits are fresh",
-            image: require("../assets/images/Base.jpg")
+            image: "https://image.shutterstock.com/image-photo/happy-beautiful-asian-shopaholic-woman-260nw-1278669220.jpg"
           },
           {
             id: 4,
             text: "Fast Food is ready",
-            image: require("../assets/images/Base.jpg")
+            image: "https://image.shutterstock.com/image-photo/happy-beautiful-asian-shopaholic-woman-260nw-1278669220.jpg"
           },
           {
             id: 5,
             text: "Vegitabbles are green",
-            image: require("../assets/images/Base.jpg")
+            image: "https://image.shutterstock.com/image-photo/happy-beautiful-asian-shopaholic-woman-260nw-1278669220.jpg"
           }
         ]}
         renderItem={({ item }) => (
           <View>
             <View style={styles.imageWrapper}>
               <View style={styles.textWrap}>
-                <SimpleText style={styles.text}>{item.text}</SimpleText>
-                <BUTTON
+                <Text style={styles.text}>{item.text}</Text>
+                {/* <BUTTON
                   name="ios-arrow-forward"
                   size={20}
                   color="#fff"
@@ -65,9 +65,9 @@ export const ImageSlider = () => {
                   textStyle={{ fontSize: 16, color: "#ffffff" }}
                 >
                   View More
-                </BUTTON>
+                </BUTTON> */}
               </View>
-              <Image style={styles.image} source={item.image} />
+              <Image style={styles.image} source={{uri:item.image}} />
             </View>
           </View>
         )}
