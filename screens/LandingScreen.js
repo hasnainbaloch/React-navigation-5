@@ -22,7 +22,6 @@ export default function LandingScreen({navigation}) {
         <Text style={styles.title}>Latest</Text>
         <ImageSlider />
         <ProductCard />
-        <Text>----------------------HOME!!!-------------------</Text>
         <TouchableOpacity>
           <Button
             onPress={() => navigation.navigate('Setting')}
