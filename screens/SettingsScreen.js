@@ -6,7 +6,7 @@ export default function SettingsScreen() {
     <View>
 
         <Text>
-            Second!!!
+            Settings!!!
         </Text>
         
     </View>

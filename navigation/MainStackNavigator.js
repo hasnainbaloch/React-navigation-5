@@ -1,24 +1,45 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native'
-import { createStackNavigator } from '@react-navigation/stack'
+import {Text} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 
 import BottomTabNavigation from './BottomTabNavigation';
 import SettingsScreen from '../screens/SecondScreen';
+import HeaderRight from '../components/HeaderRight';
 
-const Stack = createStackNavigator()
+const Stack = createStackNavigator();
 
 function MainStackNavigator() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name='Root' component={BottomTabNavigation} />
-        <Stack.Screen name='Setting' component={SettingsScreen} />
+      <Stack.Navigator
+        initialRouteName="Root"
+        screenOptions={{
+          gestureEnabled: true,
+          headerTitle: false,
+          headerTransparent: true,
+
+          headerRight: () => (     
+            <HeaderRight/>    
+          ),
+          headerStyle: {
+            backgroundColor: '#454545'
+          },
+          headerTitleStyle: {
+            // fontWeight: 'bold',
+          },
+          // headerTintColor: '#ffffff',
+          headerBackTitleVisible: false
+        }}
+        // headerMode='float'
+        // headerMode= {false}
+        >
+        <Stack.Screen name="Root" component={BottomTabNavigation} />
+        <Stack.Screen name="Setting" component={SettingsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
-  )
+  );
 }
 
-export default MainStackNavigator
-
-
+export default MainStackNavigator;

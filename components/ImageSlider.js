@@ -11,8 +11,6 @@ import {
   Button
 } from "react-native";
 
-// import { SimpleText } from "./StyledText";
-
 
 const Width = Dimensions.get("window").width;
 const Height = Dimensions.get("window").height;
@@ -84,7 +82,8 @@ const styles = StyleSheet.create({
     marginRight: 12,
     position: "relative",
     backgroundColor: "#454545",
-    borderRadius: 10
+    borderRadius: 10,
+    marginBottom: 30
   },
   image: {
     borderRadius: 10,
@@ -105,4 +104,6 @@ const styles = StyleSheet.create({
   text: {
     color: "#ffffff"
   }
+
+
 });

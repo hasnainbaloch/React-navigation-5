@@ -1,12 +1,14 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, SafeAreaView} from 'react-native';
 
-export default function SecondScreen() {
+import ContentWrapper from '../components/ContentWrapper';
+
+export default function SearchScreen() {
   return (
-    <SafeAreaView>
+    <ContentWrapper>
       <View>
         <Text>Search!!!  Screen</Text>
       </View>
-    </SafeAreaView>
+    </ContentWrapper>
   );
 }
