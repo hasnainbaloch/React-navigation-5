@@ -45,7 +45,7 @@ export default ImageSlider = () => {
           },
           {
             id: 5,
-            text: "Vegitabbles are green",
+            text: "Vegitables are green",
             image: "https://image.shutterstock.com/image-photo/happy-beautiful-asian-shopaholic-woman-260nw-1278669220.jpg"
           }
         ]}

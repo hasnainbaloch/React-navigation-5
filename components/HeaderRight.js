@@ -6,13 +6,15 @@ import {
   SafeAreaView,
   StyleSheet,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/AntDesign';
+
 
 export default function HeaderRight() {
   return (
     <>
       <View style={styles.headerWrap}>
-        <Text>ICON-1</Text>
-        <Text>ICON-2</Text>
+        <Icon style={styles.icon} name="bells" size={20} color="#454545" />
+        <Icon style={styles.icon} name="message1" size={20} color="#454545" />
       </View>
     </>
   );
@@ -25,4 +27,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flexDirection: 'row',
   },
+  icon:{
+    marginRight: 15
+  }
 });

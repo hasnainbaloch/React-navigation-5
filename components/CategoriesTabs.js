@@ -24,7 +24,7 @@ export default CategoriesTabs = () => {
           {id: 2, name: 'Grocery'},
           {id: 3, name: 'Fruits'},
           {id: 4, name: 'Fast Food'},
-          {id: 5, name: 'Vegitabbles'},
+          {id: 5, name: 'Vegitables'},
         ]}
         renderItem={({item}) => (
           <View>
