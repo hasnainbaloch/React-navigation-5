@@ -11,7 +11,7 @@ export default function contentWrapper(props) {
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: '2%',
-    marginTop: '12%',
+    paddingHorizontal: '3%',
+    marginTop: '15%',
   },
 });
