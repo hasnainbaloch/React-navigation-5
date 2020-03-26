@@ -17,7 +17,18 @@ export default function BottomTabNavigation() {
       initialRouteName="Home"
       tabBarOptions={{
         activeTintColor: '#515C6F',
-      }}>
+        inactiveTintColor: '#a6a6a6',
+        keyboardHidesTabBar: true,
+        labelStyle:{
+          fontWeight: 'bold',
+          fontSize: 14  
+        },
+        style:{
+          paddingTop: 10,
+          height: 90
+        }
+      }}
+      >
       <Tab.Screen
         options={{
           tabBarLabel: 'Home',

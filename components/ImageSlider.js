@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -8,12 +8,13 @@ import {
   TouchableOpacity,
   Image,
   Dimensions,
-  Button
-} from "react-native";
+  Button,
+} from 'react-native';
 
+import BUTTON from '../components/Button';
 
-const Width = Dimensions.get("window").width;
-const Height = Dimensions.get("window").height;
+const Width = Dimensions.get('window').width;
+const Height = Dimensions.get('window').height;
 
 export default ImageSlider = () => {
   return (
@@ -25,47 +26,59 @@ export default ImageSlider = () => {
           {
             id: 1,
             text:
-              "lorem ipsume text with and without, lorem ipsume text. avialable 24/7",
-            image: "https://image.shutterstock.com/image-photo/happy-beautiful-asian-shopaholic-woman-260nw-1278669220.jpg"
+              'lorem ipsume text with and without, lorem ipsume text. avialable 24/7',
+            image:
+              'https://image.shutterstock.com/image-photo/happy-beautiful-asian-shopaholic-woman-260nw-1278669220.jpg',
           },
           {
             id: 2,
-            text: "Grocery is cheap",
-            image: "https://image.shutterstock.com/image-photo/happy-beautiful-asian-shopaholic-woman-260nw-1278669220.jpg"
+            text: 'Grocery is cheap',
+            image:
+              'https://image.shutterstock.com/image-photo/happy-beautiful-asian-shopaholic-woman-260nw-1278669220.jpg',
           },
           {
             id: 3,
-            text: "Fruits are fresh",
-            image: "https://image.shutterstock.com/image-photo/happy-beautiful-asian-shopaholic-woman-260nw-1278669220.jpg"
+            text: 'Fruits are fresh',
+            image:
+              'https://image.shutterstock.com/image-photo/happy-beautiful-asian-shopaholic-woman-260nw-1278669220.jpg',
           },
           {
             id: 4,
-            text: "Fast Food is ready",
-            image: "https://image.shutterstock.com/image-photo/happy-beautiful-asian-shopaholic-woman-260nw-1278669220.jpg"
+            text: 'Fast Food is ready',
+            image:
+              'https://image.shutterstock.com/image-photo/happy-beautiful-asian-shopaholic-woman-260nw-1278669220.jpg',
           },
           {
             id: 5,
-            text: "Vegitables are green",
-            image: "https://image.shutterstock.com/image-photo/happy-beautiful-asian-shopaholic-woman-260nw-1278669220.jpg"
-          }
+            text: 'Vegitables are green',
+            image:
+              'https://image.shutterstock.com/image-photo/happy-beautiful-asian-shopaholic-woman-260nw-1278669220.jpg',
+          },
         ]}
-        renderItem={({ item }) => (
+        renderItem={({item}) => (
           <View>
             <View style={styles.imageWrapper}>
               <View style={styles.textWrap}>
                 <Text style={styles.text}>{item.text}</Text>
-                {/* <BUTTON
-                  name="ios-arrow-forward"
-                  size={20}
+              </View>
+              <Image style={styles.image} source={{uri: item.image}} />
+              <View style={styles.btnPos}>
+                <BUTTON
+                  name="right"
+                  size={16}
                   color="#fff"
                   iconBg="#454545"
-                  btnStyle={{ backgroundColor: "#454545", padding: 5 }}
-                  textStyle={{ fontSize: 16, color: "#ffffff" }}
-                >
+                  btnStyle={{
+                    backgroundColor: '#ffffff',
+                    padding: 5,
+                    marginTop: 20,
+                  }}
+                  textStyle={{fontSize: 14, color: '#454545', paddingLeft: 20}}
+                  radius={20}
+                  pad={5}>
                   View More
-                </BUTTON> */}
+                </BUTTON>
               </View>
-              <Image style={styles.image} source={{uri:item.image}} />
             </View>
           </View>
         )}
@@ -78,32 +91,36 @@ export default ImageSlider = () => {
 const styles = StyleSheet.create({
   imageWrapper: {
     width: Width - 50,
-    height: Height / 3,
+    height: Height / 3.6,
     marginRight: 12,
-    position: "relative",
-    backgroundColor: "#454545",
+    position: 'relative',
+    backgroundColor: '#454545',
     borderRadius: 10,
-    marginBottom: 30
+    marginBottom: 30,
   },
   image: {
     borderRadius: 10,
-    width: "100%",
-    height: "100%"
+    width: '100%',
+    height: '100%',
   },
 
   textWrap: {
-    position: "absolute",
-    backgroundColor: "rgba(96,100,109, 0.8)",
+    position: 'absolute',
+    backgroundColor: 'rgba(96,100,109, 0.8)',
     paddingHorizontal: 20,
     paddingVertical: 10,
-    top: "20%",
-    left: "5%",
-    width: "60%",
-    zIndex: 99
+    top: '20%',
+    left: '5%',
+    width: '60%',
+    zIndex: 99,
   },
   text: {
-    color: "#ffffff"
-  }
-
-
+    color: '#ffffff',
+  },
+  btnPos: {
+    position: 'absolute',
+    width: '60%',
+    bottom: 60,
+    left: 20,
+  },
 });

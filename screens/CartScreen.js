@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import ContentWrapper from '../components/ContentWrapper';
 import CartItem from '../components/CartItem';
+import CartTotal from '../components/CartTotal';
 
 const Width = Dimensions.get('window').width;
 const Height = Dimensions.get('window').height;
@@ -47,7 +48,7 @@ export default function CartScreen() {
         </ScrollView>
       </View>
       <View style={styles.cartBottom}>
-        <Text>TOTAL</Text>
+        <CartTotal/>
       </View>
     </ContentWrapper>
   );
@@ -65,5 +66,9 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: '#fbfbfb',
     width: Width,
+    borderTopColor: '#cccccc',
+    borderWidth: 1,
+    borderRightWidth: 0,
+    borderLeftWidth: 0,
   }
 });
