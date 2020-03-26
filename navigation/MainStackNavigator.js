@@ -6,6 +6,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import BottomTabNavigation from './BottomTabNavigation';
 import SettingsScreen from '../screens/SecondScreen';
+import CheckoutScreen from '../screens/CheckoutScreen';
 import HeaderRight from '../components/HeaderRight';
 
 const Stack = createStackNavigator();
@@ -37,6 +38,7 @@ function MainStackNavigator() {
         >
         <Stack.Screen name="Root" component={BottomTabNavigation} />
         <Stack.Screen name="Setting" component={SettingsScreen} />
+        <Stack.Screen name="Checkout" component={CheckoutScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,24 +1,25 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, ShadowPropTypesIOS} from 'react-native';
 
 import BUTTON from './Button';
 
-export default function CartTotal() {
+export default function CartTotal(props) {
   return (
     <View style={styles.cartTotalWrap}>
       <View style={styles.total}>
-        <Text style={styles.totalTitle}>Total</Text>
+        <Text style={styles.totalTitle}>TOTAL</Text>
         <Text style={styles.totalScore}>PKR 99999</Text>
         <Text style={styles.charges}>PKR 99 shipping charges</Text>
       </View>
       <View style={styles.btnWrap}>
         <BUTTON
+          click={props.clicked}
           name="right"
           size={16}
-          color="#454545"
+          color="#2A2D43"
           iconBg="#ffffff"
           btnStyle={{
-            backgroundColor: '#454545'
+            backgroundColor: '#2A2D43'
           }}
           textStyle={{
             fontSize: 16,
@@ -44,15 +45,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   totalTitle: {
-    color: '#454545',
+    color: '#929EB4',
     fontSize: 16,
+    marginBottom: 5,
   },
   totalScore: {
     fontSize: 18,
     fontWeight: 'bold',
+    color: '#515C6F',
   },
   charges: {
-    color: '#454545',
+    color: '#929EB4',
   },
   total: {
     flex: 2,

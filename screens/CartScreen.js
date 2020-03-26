@@ -14,7 +14,7 @@ import CartTotal from '../components/CartTotal';
 const Width = Dimensions.get('window').width;
 const Height = Dimensions.get('window').height;
 
-export default function CartScreen() {
+export default function CartScreen(props) {
   return (
     <ContentWrapper>
       <View>
@@ -48,7 +48,7 @@ export default function CartScreen() {
         </ScrollView>
       </View>
       <View style={styles.cartBottom}>
-        <CartTotal/>
+        <CartTotal clicked={() => props.navigation.navigate('Checkout')}/>
       </View>
     </ContentWrapper>
   );
@@ -59,12 +59,13 @@ const styles = StyleSheet.create({
     fontSize: 30,
     marginBottom: 20,
     fontWeight: 'bold',
+    color: '#515C6F',
   },
   cartBottom: {
     position: 'absolute',
     bottom: 0,
     padding: 20,
-    backgroundColor: '#fbfbfb',
+    backgroundColor: '#F5F6F8',
     width: Width,
     borderTopColor: '#cccccc',
     borderWidth: 1,
