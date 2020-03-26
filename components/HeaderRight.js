@@ -13,8 +13,8 @@ export default function HeaderRight() {
   return (
     <>
       <View style={styles.headerWrap}>
-        <Icon style={styles.icon} name="bells" size={20} color="#454545" />
         <Icon style={styles.icon} name="message1" size={20} color="#454545" />
+        <Icon style={styles.icon} name="bells" size={20} color="#454545" />
       </View>
     </>
   );
