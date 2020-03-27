@@ -71,5 +71,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRightWidth: 0,
     borderLeftWidth: 0,
+    borderBottomWidth: 0,
   }
 });
