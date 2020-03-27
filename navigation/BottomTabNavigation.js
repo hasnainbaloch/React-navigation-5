@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { Platform } from 'react-native';
 
 import LandingScreen from '../screens/LandingScreen';
 import SearchScreen from '../screens/SearchScreen';
@@ -24,8 +25,8 @@ export default function BottomTabNavigation() {
           fontSize: 14  
         },
         style:{
-          paddingTop: 10,
-          height: 90
+          paddingTop: Platform.OS === 'ios' ? 10 : 5,
+          height: Platform.OS === 'ios' ? 90 : 60
         }
       }}
       >

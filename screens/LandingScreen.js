@@ -83,8 +83,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
+    
     paddingHorizontal: '2%',
-    paddingBottom: '30%',
+    paddingBottom: '50%',
   },
 });
 //       ios: {

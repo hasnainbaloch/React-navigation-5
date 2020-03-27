@@ -9,6 +9,7 @@ import {
   Image,
   Dimensions,
   Button,
+  Platform
 } from 'react-native';
 
 import BUTTON from '../components/Button';
@@ -120,7 +121,7 @@ const styles = StyleSheet.create({
   btnPos: {
     position: 'absolute',
     width: '60%',
-    bottom: 60,
+    bottom: 30,
     left: 20,
   },
 });
