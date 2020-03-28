@@ -8,7 +8,7 @@ export default function CartTotal(props) {
     <View style={styles.cartTotalWrap}>
       <View style={styles.total}>
         <Text style={styles.totalTitle}>TOTAL</Text>
-        <Text style={styles.totalScore}>PKR 99999</Text>
+        <Text style={styles.totalScore}>PKR 100098</Text>
         <Text style={styles.charges}>PKR 99 shipping charges</Text>
       </View>
       <View style={styles.btnWrap}>
@@ -25,12 +25,13 @@ export default function CartTotal(props) {
             fontSize: 16,
             fontWeight: 'bold',
             color: '#ffffff',
-            paddingLeft: 20,
+            paddingLeft: 15,
             letterSpacing: 0.2,
+            textTransform: 'uppercase'
           }}
           radius={20}
           pad={5}>
-          CHECKOUT
+          {props.btnText}
         </BUTTON>
       </View>
     </View>

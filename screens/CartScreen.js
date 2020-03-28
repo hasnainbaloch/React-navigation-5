@@ -22,33 +22,23 @@ export default function CartScreen(props) {
       </View>
       <View style={styles.scrollView}>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <CartItem
-            image={'https://i.ya-webdesign.com/images/lotion-bottle-png-3.png'}
-          />
-          <CartItem
-            image={'https://i.ya-webdesign.com/images/lotion-bottle-png-3.png'}
-          />
+          {[1, 1, 1, 1, 1].map((item, i) => {
+            return (
+              <>
+                <CartItem
+                  image={
+                    'https://i.ya-webdesign.com/images/lotion-bottle-png-3.png'
+                  }
+                />
+              </>
+            );
+          })}
 
-          <CartItem
-            image={'https://i.ya-webdesign.com/images/lotion-bottle-png-3.png'}
-          />
-
-          <CartItem
-            image={'https://i.ya-webdesign.com/images/lotion-bottle-png-3.png'}
-          />
-
-          <CartItem
-            image={'https://i.ya-webdesign.com/images/lotion-bottle-png-3.png'}
-          />
-
-          <CartItem
-            image={'https://i.ya-webdesign.com/images/lotion-bottle-png-3.png'}
-          />
-          <View style={{ marginBottom: 140 }} />
+          <View style={{marginBottom: 140}} />
         </ScrollView>
       </View>
       <View style={styles.cartBottom}>
-        <CartTotal clicked={() => props.navigation.navigate('Checkout')}/>
+        <CartTotal btnText={'CHECKOUT'} clicked={() => props.navigation.navigate('Checkout')} />
       </View>
     </ContentWrapper>
   );
@@ -72,5 +62,5 @@ const styles = StyleSheet.create({
     borderRightWidth: 0,
     borderLeftWidth: 0,
     borderBottomWidth: 0,
-  }
+  },
 });
