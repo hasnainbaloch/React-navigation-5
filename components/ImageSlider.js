@@ -27,7 +27,7 @@ export default ImageSlider = () => {
           {
             id: 1,
             text:
-              'lorem ipsume text with and without, lorem ipsume text. avialable 24/7',
+              'lorem ipsume text with and without, lorem ipsume text. avialable 24/7 and for extra will be free!',
             image:
               'https://image.shutterstock.com/image-photo/happy-beautiful-asian-shopaholic-woman-260nw-1278669220.jpg',
           },
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     top: '20%',
     left: '5%',
-    width: '60%',
+    width: '80%',
     zIndex: 99,
   },
   text: {

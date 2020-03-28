@@ -1,11 +1,17 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import ContentWraper from '../components/ContentWrapper';
+import ShippingAddress from '../components/ShippingAddress';
+import PaymentMethods from '../components/PaymentMethods';
 
 export default function CheckoutScreen() {
   return (
     <ContentWraper>
         <Text style={styles.title}>Checkout</Text>
+        <ShippingAddress/>
+
+        {/* payment method */}
+        <PaymentMethods/>
     </ContentWraper>
   );
 }
